@@ -6,6 +6,7 @@ This Dockerfile allows you to run Quake 3 demo in an unprivileged container runn
 Build
 -----
 Find the file linuxq3ademo-1.11-6.x86.gz.sh and copy it to this directory (see checksum file) then run:
+
 `$ docker build . -t docker-q3demo`
 
 Run
@@ -27,9 +28,9 @@ Enable sound
 ------------
 Run the following on the host:
 ```
-modprobe snd-pcm-oss
-echo "q3demo 0 0 direct" > /proc/asound/card0/pcm0p/oss
-echo "q3demo 0 0 disable" > /proc/asound/card0/pcm0c/oss
+$ modprobe snd-pcm-oss
+$ echo "q3demo 0 0 direct" > /proc/asound/card0/pcm0p/oss
+$ echo "q3demo 0 0 disable" > /proc/asound/card0/pcm0c/oss
 ```
 
 Links
